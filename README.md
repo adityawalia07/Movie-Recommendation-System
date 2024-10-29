@@ -81,7 +81,9 @@ Feel free to open issues or submit pull requests to improve this recommendation 
 Future enhancements may include collaborative filtering, user feedback loops, and expanding data sources for improved recommendations.<br>
 Continuous updates to the movie database and advancements in NLP techniques could further enhance system accuracy.
 
+# Output Images
+![Screenshot 2024-10-29 151549](https://github.com/user-attachments/assets/aeb36cc3-ce90-4418-8270-00564b5df6b0)
+![Screenshot 2024-10-29 151639](https://github.com/user-attachments/assets/243f6417-76fd-4059-88ef-7e60217cfb09)
+
 # Output
 https://github.com/user-attachments/assets/9ac2f879-75dd-44dc-936d-61f183f1467e
-
-
