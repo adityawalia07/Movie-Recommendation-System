@@ -7,8 +7,10 @@ This system can be a foundation for personalized movie suggestions in streaming 
 - Dataset
 - Project Structure
 - Usage
+- Objectives
 - Code Overview
 - Contributing
+- Future Work
 
 ## Project Overview
 The Movie Recommender System uses metadata from movies such as genres, cast, crew, and keywords to calculate movie similarity scores and provide recommendations.<br>
@@ -33,30 +35,38 @@ To use this system, ensure you have the above CSV files in the same directory as
 pip install numpy pandas sklearn nltk
 ```
 ## Usage
-- Load the Notebook: Open Movie Recommender System.ipynb in Jupyter Notebook or JupyterLab.
+- **Load the Notebook**: Open Movie Recommender System.ipynb in Jupyter Notebook or JupyterLab.
 
-- Run the Notebook: Execute each cell sequentially to load data, preprocess it, and build the recommendation system.
+- **Run the Notebook**: Execute each cell sequentially to load data, preprocess it, and build the recommendation system.
 
-- Get Recommendations: After running the notebook, you can enter a movie title to receive a list of recommended movies based on content similarity.
+- **Get Recommendations**: After running the notebook, you can enter a movie title to receive a list of recommended movies based on content similarity.
+
+##  Objectives
+The primary objectives include:
+
+- Efficiently processing and cleaning movie data.
+- Generating content-based tags using the NLTK library.
+- Implementing a recommendation system based on cosine similarity.
+- Creating an interactive Streamlit web application for user-friendly exploration.
 
 ## Code Overview
-1. Import Libraries
+### 1. Import Libraries
 - import numpy as np
 - import pandas as pd
 - import nltk
-2. Load Data
+### 2. Load Data
 - movies = pd.read_csv('tmdb_5000_movies.csv')
 - credits = pd.read_csv('tmdb_5000_credits.csv')
-3. Data Preprocessing
+### 3. Data Preprocessing
 - Merge the movies and credits datasets on the title column.
 - Select key features such as genres, cast, crew, and keywords.
 - Process the text data, handling NaNs and combining features for a simplified data format.
-4. Build the Recommendation Model
+### 4. Build the Recommendation Model
 - Use **CountVectorizer** to create a **bag-of-words model** for the combined features.
 - Compute similarity between movies using **cosine** similarity.
-5. Function to Fetch Recommendations
+### 5. Function to Fetch Recommendations
 - Define a function to retrieve the top n similar movies for any given movie based on cosine similarity scores.
-6. Test the Recommender
+### 6. Test the Recommender
 - Test with a sample movie title and receive a list of recommended movies.
 ## Example
 ### Sample usage in the notebook
@@ -66,3 +76,7 @@ print(recommendations)
 ```
 ## Contributing
 Feel free to open issues or submit pull requests to improve this recommendation system.<br> Contributions are welcome for enhancing model accuracy, adding new features, or improving code readability.
+
+## Future Work
+Future enhancements may include collaborative filtering, user feedback loops, and expanding data sources for improved recommendations.<br>
+Continuous updates to the movie database and advancements in NLP techniques could further enhance system accuracy.
